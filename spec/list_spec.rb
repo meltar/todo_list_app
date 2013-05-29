@@ -19,4 +19,8 @@ describe List do
     list.total_tasks.should eq(total + 1)
   end
 
+  xit "should return the list of all tasks" do
+    list = List.new
+    list.add_task("Task one", 1)
+  end
 end

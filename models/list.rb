@@ -1,8 +1,8 @@
-require_relative './task'
+require_relative "./task.rb"
 
 class List
 
-  attr_reader :tasks, :total_tasks, :total_incomplete, :total_complete
+  attr_reader :tasks, :total_tasks
 
   def initialize
     @tasks = []
@@ -14,5 +14,7 @@ class List
   end
 
   def add_task(description, priority)
+    task = Task.new(description, priority)
+    @tasks << task
   end
 end

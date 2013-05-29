@@ -1,1 +1,1 @@
-RailsGirls To Do app
+To do list - app for RailsGirls
