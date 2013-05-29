@@ -19,8 +19,17 @@ describe List do
     list.total_tasks.should eq(total + 1)
   end
 
-  xit "should return the list of all tasks" do
+  it "should return the list of all tasks" do
     list = List.new
     list.add_task("Task one", 1)
+    list.add_task("Task two", 2)
+    expect(list.tasks.to_s).to include("Task one")
+    expect(list.tasks.to_s).to include("Task two")
+  end
+
+  xit "should let you mark a task in the list complete" do
+    list = List.new
+    list.add_task("Wash dishes", 5)
+
   end
 end
