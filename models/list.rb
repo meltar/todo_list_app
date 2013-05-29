@@ -2,18 +2,17 @@ require_relative "./task.rb"
 
 class List
 
-  attr_reader :tasks, :total_tasks
+  attr_reader :tasks
 
   def initialize
     @tasks = []
-    @total_tasks = 0
   end
   
   def total_tasks
-    @total_tasks = @tasks.count
+    @tasks.count
   end
 
-  def add_task(description, priority = 0)
+  def add_task(description, priority = 1)
     task = Task.new(description, priority)
     @tasks << task
   end

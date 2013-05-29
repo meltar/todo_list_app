@@ -5,9 +5,10 @@ class Task
   def initialize(task_desc, priority = 1)
     @desc = task_desc 
     if priority < 1 || priority > 5
-      priority = 1
+      @priority = 1
+    else
+      @priority = priority
     end
-    @priority = { 5 => :five, 4 => :four, 3 => :three, 2 => :two, 1 => :one }[priority]
     @complete = false
   end
 
@@ -21,7 +22,7 @@ class Task
   end
 
   def priority_type
-    { five: "*****", four: "****", three: "***", two: "**", one: "*" }[@priority]
+    "*" 
   end
 
   def to_s
