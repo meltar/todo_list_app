@@ -29,5 +29,9 @@ describe Task do
     task.complete?.should be(true)
   end
 
+  it "should have a to_s showing the priority in stars" do
+    task = Task.new("Feed cats", 3)
+    task.to_s.should eq("*** - Feed cats")
+  end
 
 end

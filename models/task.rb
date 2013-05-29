@@ -22,7 +22,11 @@ class Task
   end
 
   def priority_type
-    "*" 
+    stars = ""
+    @priority.times do 
+      stars = stars + '*'
+    end
+    stars
   end
 
   def to_s
