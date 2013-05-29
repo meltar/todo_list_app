@@ -17,8 +17,6 @@ GEM
     diff-lcs (1.2.4)
     i18n (0.6.1)
     multi_json (1.7.4)
-    pg (0.15.1)
-    pg (0.15.1-x86-mingw32)
     rake (10.0.4)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
@@ -37,6 +35,5 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
-  pg
   rake
   rspec

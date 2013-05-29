@@ -23,8 +23,16 @@ describe List do
     list = List.new
     list.add_task("Task one", 1)
     list.add_task("Task two", 2)
-    expect(list.tasks.to_s).to include("Task one")
-    expect(list.tasks.to_s).to include("Task two")
+    expect(list.to_s).to include("Task one")
+    expect(list.to_s).to include("Task two")
+  end
+
+  it "should be able to be reset" do
+    list = List.new
+    list.add_task("Vacuum")
+    list.total_tasks.should eq(1)
+    list.reset
+    list.total_tasks.should eq(0)
   end
 
   xit "should let you mark a task in the list complete" do

@@ -13,8 +13,17 @@ class List
     @total_tasks = @tasks.count
   end
 
-  def add_task(description, priority)
+  def add_task(description, priority = 0)
     task = Task.new(description, priority)
     @tasks << task
+  end
+
+  def reset
+    @tasks = []
+  end
+
+  def to_s
+    sorted = @tasks.sort_by { |t| t.priority }
+    sorted.inspect
   end
 end

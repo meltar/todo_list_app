@@ -16,6 +16,7 @@ class Task
   end
 
   def set_completed
+    @priority = 0
     @complete = true
   end
 
