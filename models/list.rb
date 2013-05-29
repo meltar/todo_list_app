@@ -22,7 +22,7 @@ class List
   end
 
   def to_s
-    sorted = @tasks.sort_by { |t| t.priority }
+    sorted = @tasks.sort_by { |t| t.priority }.reverse
     sorted.inspect
   end
 end

@@ -12,7 +12,7 @@ until gets.chomp().capitalize != "Y"
   desc = gets.chomp()
   puts "Enter a priority 1-5 with five being the most important."
   priority = gets.chomp()
-  puts "Your task, \"#{desc}, has a priority of #{priority}.  Do you want to save it? (Y/N)"
+  puts "Your task, \"#{desc},\" has a priority of #{priority}.  Do you want to save it? (Y/N)"
   result = gets.chomp().capitalize
   if result == "Y"
     demo_list.add_task(desc, priority.to_i) 
